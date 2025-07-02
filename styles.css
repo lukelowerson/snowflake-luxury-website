@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@100;200;300;400;500;600;700;&family=Playfair+Display:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Outfit:wght@100;200;300;400;500;600;700&family=Playfair+Display:wght@400;500;700&display=swap");
 
 :root {
-  --background-color: #eceae8;
+  /* --background-color: #eceae8; */
+  --background-color: #ecd9be;
   --logo-color: rgb(45, 23, 13);
+  --font-primary: "Outfit", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  --font-accent: "Playfair Display", sans-serif;
 }
 
 * {
@@ -10,7 +14,9 @@
   margin: 0;
   padding: 0;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   background-color: var(--background-color);
@@ -45,7 +51,7 @@ body {
 
 /* Menu links */
 .navbar-menu li a {
-  font-family: "Outfit", sans-serif;
+  font-family: var(--font-secondary);
   color: var(--logo-color);
   text-decoration: none;
   font-weight: 400;
@@ -57,43 +63,15 @@ body {
   color: #c59f72;
 }
 
+/* Award-winning Luxury Gelato */
 .header h1 {
   color: var(--logo-color);
-  font-family: "Outfit";
-  font-weight: 100;
+  font-family: var(--font-accent);
+  font-weight: 400;
   font-size: 60px;
   text-align: center;
   margin-top: 45px;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
-}
-
-.quote h2 {
-  color: var(--logo-color);
-  font-family: "Outfit";
-  font-weight: 400;
-  text-align: center;
-}
-
-.text {
-  text-align: center;
-}
-
-.text h1 {
-  color: var(--logo-color);
-  font-family: "Outfit";
-  font-weight: 700;
-  margin: 40px auto;
-  border-bottom: 2px solid var(--logo-color);
-  border-radius: 4px;
-  display: inline-block;
-  padding-bottom: 4px;
-}
-
-.text p {
-  font-family: "Outfit";
-  color: var(--logo-color);
-  font-weight: 400;
-  font-size: 20px;
 }
 
 /* Carousel*/
@@ -126,4 +104,104 @@ body {
 .carousel-track img:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+/* "It's very, VERY smooth. Smooth is good." - Charles Campion. */
+.quote h2 {
+  margin-top: -15px;
+  color: var(--logo-color);
+  font-family: var(--font-accent);
+  font-weight: 400;
+  text-align: center;
+}
+/* GREAT TASTE AWARD */
+.award {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.award img {
+  height: auto;
+  width: 100px;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text h1 {
+  color: var(--logo-color);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  margin: 20px auto;
+  border-bottom: 1px solid var(--logo-color);
+  border-radius: 5px;
+  padding-bottom: 4px;
+  font-size: 27px;
+}
+
+.text p {
+  margin-left: 300px;
+  margin-right: 300px;
+  font-family: var(--font-primary);
+  color: var(--logo-color);
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  text-decoration: none;
+  margin-top: 160px;
+}
+
+.social-icons a {
+  font-size: 3rem;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+#instagram a {
+  color: #e1306c;
+}
+#instagram a:visited {
+  color: #e1306c; /* same as base to avoid purple */
+}
+
+#instagram a:hover {
+  color: #9b3680;
+}
+
+#tiktok a {
+  color: black;
+}
+
+#tiktok a:visited {
+  color: #000000;
+}
+
+#tiktok a:hover {
+  color: #e1306c;
+}
+
+.follow-text {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-secondary);
+  font-size: 13px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.follow-text h1 {
+  font-weight: 200;
 }
